@@ -12,14 +12,7 @@ const authRoutes = require("./Routes/auth.js");
 connection();
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(
-  cors({
-    origin: "https://acci-zone-finder.vercel.app",
-    methods: ["POST", "GET"],
-    credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 

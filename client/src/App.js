@@ -119,13 +119,10 @@ function Map({ setUserChecked }) {
     const { lat, lng } = e.latlng; // Get latitude and longitude of clicked position
     try {
       // Send the clicked position to the server
-      const response = await axios.post(
-        "https://acci-zone-finder-api.vercel.app/location",
-        {
-          lat,
-          lng,
-        }
-      );
+      const response = await axios.post("http://localhost:8000/location", {
+        lat,
+        lng,
+      });
       console.log(response.data.matches[0]);
       // Store the clicked position with popup message in the state
       setClickedPosition({

@@ -22,7 +22,7 @@ function SignUp() {
         passwd: passwordInput.current.value,
       };
       const { data: res } = await axios.post(
-        "https://acci-zone-finder-api.vercel.app/api/users",
+        "http://localhost:8000/api/users",
         formData
       );
       navigate("/login");
