@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: ["https://acci-zone-finder.vercel.app"],
+    origin: "https://acci-zone-finder.vercel.app",
     methods: ["POST", "GET"],
     credentials: true,
   })
