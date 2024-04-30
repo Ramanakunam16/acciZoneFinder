@@ -16,7 +16,7 @@ function Login() {
         passwd: passwordInput.current.value,
       };
       const { data: res } = await axios.post(
-        "http://localhost:8000/api/auth",
+        "https://acci-zone-finder-api.vercel.app/api/auth",
         formData
       );
       localStorage.setItem("token", res.data);
