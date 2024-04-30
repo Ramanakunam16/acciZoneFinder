@@ -17,6 +17,7 @@ app.use(
     origin: "https://acci-zone-finder.vercel.app",
     methods: ["POST", "GET"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use("/api/users", userRoutes);
